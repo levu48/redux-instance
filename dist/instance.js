@@ -74,7 +74,10 @@ var instanceState = exports.instanceState = function instanceState(func) {
 };
 
 var instanceReducer = exports.instanceReducer = function instanceReducer(reducer) {
-    return function (state, action) {
+    return function () {
+        var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+        var action = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
         if (state.__id && action.__id && state.__id === action.__id) {
             return reducer(state, action);
         }

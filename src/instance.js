@@ -33,7 +33,7 @@ export const instanceState = (func) => (state, props) => {
     return func(state[props.__id], props);
 }
 
-export const instanceReducer = (reducer) => (state, action) => {
+export const instanceReducer = (reducer) => (state = {}, action = {}) => {
     if (state.__id && action.__id && state.__id === action.__id) { 
         return reducer(state, action);
     }
