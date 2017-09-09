@@ -10,7 +10,7 @@ export const withInstance = (ComposedComponent) => {
         }
 
         static defaultProps = {
-            __reducer: (state, action) => ({...state, '__name': 'default withInstance reducer'})
+            __reducer: (state, action) => state
         }
 
         constructor(props) {
@@ -34,13 +34,8 @@ export const instanceState = (func) => (state, props) => {
 }
 
 export const instanceReducer = (reducer) => (state, action) => {
-    if (!isInstance(state, action)) { 
-        return state;
+    if (state.__id && action.__id && state.__id === action.__id) { 
+        return reducer(state, action);
     }
-    return reducer(state, action);
+    return state;
 }
-
-export const isInstance = (state = {}, action = {}) => (
-    state.__id && action.__id && state.__id === action.__id
-        ? true : false
-)

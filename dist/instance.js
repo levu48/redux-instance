@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.isInstance = exports.instanceReducer = exports.instanceState = exports.instanceAction = exports.withInstance = undefined;
+exports.instanceReducer = exports.instanceState = exports.instanceAction = exports.withInstance = undefined;
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -41,7 +41,6 @@ var withInstance = exports.withInstance = function withInstance(ComposedComponen
             var _this = _possibleConstructorReturn(this, (withInstance.__proto__ || Object.getPrototypeOf(withInstance)).call(this, props));
 
             _this.__id = ComposedComponent.displayName + "/" + (0, _uuid.v4)();
-            //injectReducer(ComposedComponent.displayName + "/" + this.__id, props.__reducer);
             (0, _dynamix.injectReducer)(_this.__id, props.__reducer);
 
             return _this;
@@ -59,18 +58,10 @@ var withInstance = exports.withInstance = function withInstance(ComposedComponen
         __reducer: _propTypes2.default.func
     }, _class.defaultProps = {
         __reducer: function __reducer(state, action) {
-            return _extends({}, state, { '__name': 'default withInstance reducer' });
+            return state;
         }
     }, _temp;
 };
-
-// export const instanceActions = (Actions, props) => {
-//     let obj = {};
-//     Object.keys(Actions).forEach(key => {
-//         obj[key] = {...Actions[key], __id: props.__id};
-//     });
-//     return obj;
-// }
 
 var instanceAction = exports.instanceAction = function instanceAction(action, props) {
     return _extends({}, action, { __id: props.__id });
@@ -84,15 +75,9 @@ var instanceState = exports.instanceState = function instanceState(func) {
 
 var instanceReducer = exports.instanceReducer = function instanceReducer(reducer) {
     return function (state, action) {
-        if (!isInstance(state, action)) {
-            return state;
+        if (state.__id && action.__id && state.__id === action.__id) {
+            return reducer(state, action);
         }
-        return reducer(state, action);
+        return state;
     };
-};
-
-var isInstance = exports.isInstance = function isInstance() {
-    var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-    var action = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-    return state.__id && action.__id && state.__id === action.__id ? true : false;
 };
