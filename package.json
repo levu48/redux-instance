@@ -2,9 +2,8 @@
   "name": "redux-instance",
   "version": "0.1.5",
   "description": "Redux management for multiple instances of React components",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "main": "./dist/index.js",
     "build": "babel src --out-dir dist",
     "prepublish": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
