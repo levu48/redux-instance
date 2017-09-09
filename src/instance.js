@@ -16,7 +16,6 @@ export const withInstance = (ComposedComponent) => {
         constructor(props) {
             super(props);
             this.__id = ComposedComponent.displayName + "/" + v4();
-            //injectReducer(ComposedComponent.displayName + "/" + this.__id, props.__reducer);
             injectReducer(this.__id, props.__reducer);
 
         }
@@ -25,14 +24,6 @@ export const withInstance = (ComposedComponent) => {
         }
     }
 }
-
-// export const instanceActions = (Actions, props) => {
-//     let obj = {};
-//     Object.keys(Actions).forEach(key => {
-//         obj[key] = {...Actions[key], __id: props.__id};
-//     });
-//     return obj;
-// }
 
 export const instanceAction = (action, props) => {
     return {...action, __id: props.__id}
