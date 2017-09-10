@@ -1,0 +1,36 @@
+{
+  "name": "next-redux-instance",
+  "version": "0.1.0",
+  "description": "Example of using redux-instance with nextjs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/levu48/redux-instance.git"
+  },
+  "keywords": [
+    "redux-instance",
+    "redux",
+    "react",
+    "next"
+  ],
+  "author": "levu48@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/levu48/redux-instance/issues"
+  },
+  "homepage": "https://github.com/levu48/redux-instance#readme",
+  "dependencies": {
+    "next": "^3.2.2",
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "redux-instance": "^0.1.9"
+  }
+}
