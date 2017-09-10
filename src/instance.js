@@ -15,7 +15,7 @@ export const withInstance = (ComposedComponent) => {
 
         constructor(props) {
             super(props);
-            this.__id = ComposedComponent.displayName + "/" + v4();
+            this.__id = ComposedComponent.displayName + ":" + v4();
             injectReducer(this.__id, props.__reducer);
 
         }

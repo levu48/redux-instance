@@ -40,7 +40,7 @@ var withInstance = exports.withInstance = function withInstance(ComposedComponen
 
             var _this = _possibleConstructorReturn(this, (withInstance.__proto__ || Object.getPrototypeOf(withInstance)).call(this, props));
 
-            _this.__id = ComposedComponent.displayName + "/" + (0, _uuid.v4)();
+            _this.__id = ComposedComponent.displayName + ":" + (0, _uuid.v4)();
             (0, _dynamix.injectReducer)(_this.__id, props.__reducer);
 
             return _this;

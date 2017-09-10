@@ -11,7 +11,7 @@ class Dummy extends React.Component {
         return (
             <div>
                 <hr />
-                <h3>Dummy (a React component): {storm}</h3>
+                <h3>Storm: {storm}</h3>
                 <div>
                     <button onClick={() => harvey()}>Harvey</button>
                     <button onClick={() => irma()}>Irma</button>
