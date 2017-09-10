@@ -9,6 +9,34 @@ To install the package redux-instance
 npm install --save redux-instance
 ```
 
+The top-level component of an example is as followed:
+```
+import React from 'react';
+import {Provider} from 'react-redux';
+import {instanceReducer} from 'redux-instance';
+import createStore from './store';
+import Dummy from './Dummy';
+import {reducer, reducer2} from './reducers';
+
+let store = createStore();
+
+class App extends React.Component {
+    render() {
+        return (
+            <Provider store={store}>
+                <div>
+                    <Dummy />
+                    <Dummy __reducer={instanceReducer(reducer)} />
+                    <Dummy __reducer={instanceReducer(reducer2)} />
+                </div>
+            </Provider>
+        );
+    }
+}
+
+export default App;
+```
+
 To run the example:
 
 ```
