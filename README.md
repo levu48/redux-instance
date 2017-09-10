@@ -9,7 +9,7 @@ To install the package redux-instance
 npm install --save redux-instance
 ```
 
-The top-level component of an [example] (https://github.com/levu48/redux-instance/tree/master/examples/next-redux-instance) is as followed:
+The top-level component of an [example](https://github.com/levu48/redux-instance/tree/master/examples/next-redux-instance) is as followed:
 ```
 import React from 'react';
 import {Provider} from 'react-redux';
