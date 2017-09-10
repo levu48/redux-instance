@@ -23,4 +23,4 @@ then go to http://localhost:3000/dummy to see redux-instance in action.
 
 
 
-Credit: This project make use and modify Jake Daniel's [redux-dynamix](https://github.com/jake-daniels/redux-dynamix)
+Credit: This project makes use and modifies Jake Daniel's [redux-dynamix](https://github.com/jake-daniels/redux-dynamix)
