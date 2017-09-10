@@ -1,6 +1,7 @@
 ### redux-instance
 
-Provide redux management for multiple instances of the same React component
+Provide redux management for multiple instances of the same React component.
+This package allows developers to code React components with their own state, unconcerned with others in the redux store by applying redux-instance high-order components and functions withInstance, instanceState, instanceReducer, and instanceAction appropriately in react-redux 'connect'.
 
 To install the package redux-instance
 
