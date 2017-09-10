@@ -2,7 +2,7 @@ import {ActionTypes} from './actions';
 
 const initialState = {};
 
-export const reducer = (state = {}, action = {type: null, payload: {}}) => {
+export const reducer = (state = {}, action) => {
     switch (action.type) {
         case ActionTypes.INIT:
             return initialState;
@@ -19,7 +19,7 @@ export const reducer = (state = {}, action = {type: null, payload: {}}) => {
 
 }
 
-export const reducer2 = (state = {}, action = {type: null, payload: {}}) => {
+export const reducer2 = (state = {}, action) => {
     switch (action.type) {
         case ActionTypes.INIT:
             return initialState;
