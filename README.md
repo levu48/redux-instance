@@ -2,6 +2,12 @@
 
 Provide redux management for multiple instances of React components
 
+To install the package redux-instance
+
+```
+npm install --save redux-instance
+```
+
 To run the example:
 
 ```
@@ -12,3 +18,9 @@ npm run dev
 ```
 
 then go to http://localhost:3000/dummy to see redux-instance in action.
+
+
+
+
+
+Credit: This project make use and modify Jake Daniel's [redux-dynamix](https://github.com/jake-daniels/redux-dynamix)

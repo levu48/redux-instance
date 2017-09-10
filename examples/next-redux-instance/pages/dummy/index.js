@@ -15,7 +15,8 @@ class App extends React.Component {
                     <h2>redux-instance example</h2>
                     <div>Three instances of a React component with the ability to plugin different reducers.
                     The first one is with no reducer, the second with a reducer, and the third with another reducer.
-                    This display json is the state of each instance. Variable '__id' is the id of a component instance.
+                    This display json is the state of each instance. 
+                    Variable '__id' is the id of the corresponding component instance.
                     </div>
                     <Dummy />
                     <Dummy __reducer={instanceReducer(reducer)} />
