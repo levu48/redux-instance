@@ -1,6 +1,6 @@
 ### redux-instance
 
-Provide redux management for multiple instances of React components
+Provide redux management for multiple instances of the same React component
 
 To install the package redux-instance
 
