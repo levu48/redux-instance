@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {Actions} from './actions';
-import {withInstance, instanceState, instanceActions, instanceAction} from 'redux-instance';
+import {withInstance, instanceState, instanceAction} from 'redux-instance';
 
 
 class Dummy extends React.Component {
