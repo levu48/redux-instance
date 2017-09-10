@@ -1,6 +1,6 @@
 {
   "name": "redux-instance",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "description": "Redux management for multiple instances of React components",
   "main": "dist/index.js",
   "scripts": {
